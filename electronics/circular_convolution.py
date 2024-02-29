@@ -89,7 +89,8 @@ class CircularConvolution:
                 matrix[i][j] += item
 
         # multiply the matrix with the first signal
-        final_signal = np.matmul(np.transpose(matrix), np.transpose(self.first_signal))
+        #final_signal = np.matmul(np.transpose(matrix), np.transpose(self.first_signal))
+        final_signal = np.matmul(self.first_signal, matrix)
 
         # rounding-off to two decimal places
         return [round(i, 2) for i in final_signal]
